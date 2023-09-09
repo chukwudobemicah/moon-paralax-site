@@ -1,0 +1,175 @@
+header{
+    position: relative;
+    width: 100vw;
+    min-width: 100vw;
+}
+.nav{
+    @include flex(column);
+    top: 0;
+    gap: 5rem;
+    position: absolute;
+    z-index: 10000;
+    background-color: $dark-blue;
+    min-height: 100vh;
+    width: 60vw;
+}
+.menu-container{
+    position: absolute;
+    top: 0.7rem;
+z-index: 999999999;
+}
+ul{
+    @include flex(column,_,start);
+    gap: 1rem;
+margin-right: 2rem;
+    li{
+        color: $white;
+  
+    }
+    }
+
+.moon-logo{
+filter: invert(100%)
+}
+a{
+    width: 5rem;
+    color: $white;
+    margin-left: 2rem;
+    img{
+    width: 1.5rem;
+    }
+}
+.hamburger-container{
+    background-color: transparent;
+    width: toRem(25px);
+    height: toRem(16px);
+    @include flex(column);
+    margin-left: 1em;
+    position: relative;
+}
+.hamburger-btn{
+    width:100%;
+    height: toRem(3px);
+    background-color: $white;
+border-radius: 5px;
+}
+.hamburger-container::after,.hamburger-container::before{
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: toRem(3px);
+    background-color: $white;
+    color: $white;
+}
+.hamburger-container::after{
+    bottom: 0;
+}
+.hamburger-container::before{
+    top: 0;
+}
+
+@include breakpoint-up($tablet-sz){
+    header{
+        max-width: 100%;
+    }
+    header > div,
+.hamburger-container{
+    display: none;
+}
+.nav{
+    height: 5rem;
+    width: 100vw;
+    max-width: 100%;
+    max-width: 100vw;
+    @include flex(row);
+    transform: translateX(0);
+    top: 0;
+    justify-content: space-around;
+    min-height: 5rem;
+    background-color: transparent;
+    li{
+        @include flex(column);
+        width: 4.5rem;
+        height: 1.9rem;
+        text-align: center;
+        text-justify: center;
+        border-radius: 15px;
+    cursor: pointer;
+
+    }
+}
+ul{
+    @include flex(row);
+    gap: 3rem;
+}
+}
+
+.open .hamburger-container::after{
+    // display: none;
+    // background-color: red;
+    // transform: rotateX(180%);
+    // transform: translateX(180%) rotate(-45deg);
+    transform: rotate(-45deg) translate(50%,50%);
+    // transform-origin: center;
+    transition:  transform 0.3s ease;
+}
+ .open .hamburger-container::before{
+    // display: none;
+    // background-color: red;
+    // transform: rotateX(180%);
+    // transform: translateX(180%) rotate(-45deg);
+    transform: rotate(45deg) translate(50%,-50%);
+    // transform-origin: center;
+    transition:  transform 0.3s ease;
+}
+.open .hamburger-container .hamburger-btn{
+    // display: none;
+    opacity: 0;
+}
+.theme-btn{
+    @include flex(_,_,start);
+    gap: 0.5rem;
+    text-transform: uppercase;
+
+    // background-color: black;
+margin-top: 0.5rem;
+button{
+    text-transform: uppercase;
+    border: none;
+    border-radius: 20%;
+    padding: 0.5rem;
+    cursor: pointer;
+
+}
+    button:nth-child(1){
+    background-color: purple;
+    color: $white;
+    }
+    button:nth-child(2){
+    background-color: blue;
+    color: $white;
+    }
+    button:nth-child(3){
+    background-color: black;
+    color: $white;
+    }
+}
+
+@include breakpoint-up($tablet-sz){
+    li{
+        white-space: nowrap;
+        &:hover, &:active, &:focus, &:focus-within{
+            background-color: $white;
+            color: black;
+        }
+        &:hover{
+            background-color: $white;
+                    }
+    }
+    .theme-btn{
+        position: absolute;
+        width: 3rem;
+        @include flex;
+        display: none;
+    }
+}

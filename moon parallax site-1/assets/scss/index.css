@@ -1,0 +1,543 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@400;500;700&display=block");
+/* RESETS*/
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+button {
+  padding: 0px;
+}
+
+.masked-element {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* Set the width and height of the scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+}
+
+/* Set the background color of the scrollbar */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Set the color of the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+/* On hover, change the color of the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(13, 13, 214);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.visible {
+  display: flex !important;
+}
+
+.translate-left {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.translate-right {
+  transform: translateX(0%);
+  transition: transform 0.3s ease;
+}
+
+.body-max-height {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.hr-active {
+  transform: translateX(0) !important;
+  transition: transform 1s ease;
+}
+
+h2 {
+  transform: translateY(115px);
+  transition: transform 0.5s ease;
+}
+
+.h2-active {
+  transform: translateY(0);
+  transition: transform 0.5s ease;
+}
+
+h2 {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.p-active {
+  transform: translateY(0) !important;
+  transition: transform 0.3s ease;
+}
+
+body {
+  font-family: "kumbh sans", sans-serif;
+  font-family: "League Spartan", sans-serif;
+  font-family: "Poppins", sans-serif;
+  background-color: #000;
+  color: #fff;
+  font-size: 0.875rem;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+header {
+  position: relative;
+  width: 100vw;
+  min-width: 100vw;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 0;
+  gap: 5rem;
+  position: absolute;
+  z-index: 10000;
+  background-color: rgb(11, 11, 41);
+  min-height: 100vh;
+  width: 60vw;
+}
+
+.menu-container {
+  position: absolute;
+  top: 0.7rem;
+  z-index: 999999999;
+}
+
+ul {
+  display: flex;
+  justify-content: _;
+  align-items: start;
+  flex-direction: column;
+  gap: 1rem;
+  margin-right: 2rem;
+}
+ul li {
+  color: #fff;
+}
+
+.moon-logo {
+  filter: invert(100%);
+}
+
+a {
+  width: 5rem;
+  color: #fff;
+  margin-left: 2rem;
+}
+a img {
+  width: 1.5rem;
+}
+
+.hamburger-container {
+  background-color: transparent;
+  width: 1.5625rem;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 1em;
+  position: relative;
+}
+
+.hamburger-btn {
+  width: 100%;
+  height: 0.1875rem;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.hamburger-container::after, .hamburger-container::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 0.1875rem;
+  background-color: #fff;
+  color: #fff;
+}
+
+.hamburger-container::after {
+  bottom: 0;
+}
+
+.hamburger-container::before {
+  top: 0;
+}
+
+@media screen and (min-width: 600px) {
+  header {
+    max-width: 100%;
+  }
+  header > div,
+  .hamburger-container {
+    display: none;
+  }
+  .nav {
+    height: 5rem;
+    width: 100vw;
+    max-width: 100%;
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    transform: translateX(0);
+    top: 0;
+    justify-content: space-around;
+    min-height: 5rem;
+    background-color: transparent;
+  }
+  .nav li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 4.5rem;
+    height: 1.9rem;
+    text-align: center;
+    text-justify: center;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
+.open .hamburger-container::after {
+  transform: rotate(-45deg) translate(50%, 50%);
+  transition: transform 0.3s ease;
+}
+
+.open .hamburger-container::before {
+  transform: rotate(45deg) translate(50%, -50%);
+  transition: transform 0.3s ease;
+}
+
+.open .hamburger-container .hamburger-btn {
+  opacity: 0;
+}
+
+.theme-btn {
+  display: flex;
+  justify-content: _;
+  align-items: start;
+  flex-direction: _;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+.theme-btn button {
+  text-transform: uppercase;
+  border: none;
+  border-radius: 20%;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.theme-btn button:nth-child(1) {
+  background-color: purple;
+  color: #fff;
+}
+.theme-btn button:nth-child(2) {
+  background-color: blue;
+  color: #fff;
+}
+.theme-btn button:nth-child(3) {
+  background-color: black;
+  color: #fff;
+}
+
+@media screen and (min-width: 600px) {
+  li {
+    white-space: nowrap;
+  }
+  li:hover, li:active, li:focus, li:focus-within {
+    background-color: #fff;
+    color: black;
+  }
+  li:hover {
+    background-color: #fff;
+  }
+  .theme-btn {
+    position: absolute;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    display: none;
+  }
+}
+.image-container {
+  position: relative;
+  width: 100vw;
+  max-width: 100vw;
+  overflow: hidden;
+  height: 60vh;
+}
+.image-container .stars {
+  max-width: 100%;
+  z-index: -6;
+}
+.image-container img {
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.mountain-back {
+  z-index: -3;
+}
+
+.moon {
+  mix-blend-mode: screen;
+  z-index: -4;
+}
+
+h1 {
+  display: none;
+}
+
+section {
+  overflow: hidden;
+  position: relative;
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100px;
+  background: linear-gradient(to top, black, transparent);
+  z-index: 10;
+}
+
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  h1 {
+    font-size: 5rem;
+  }
+  .image-container {
+    height: 100vh;
+  }
+}
+main {
+  position: relative;
+}
+
+section {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+article {
+  display: flex;
+  justify-content: _;
+  align-items: start;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+  overflow: hidden;
+}
+
+article {
+  overflow: hidden;
+  width: 100%;
+}
+
+article:nth-child(2) {
+  margin-bottom: 1rem;
+}
+
+.article-3 {
+  margin-bottom: 3rem;
+}
+
+.paragraph-container {
+  display: flex;
+  justify-content: _;
+  align-items: start;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+hr {
+  width: 100%;
+  transform: translateX(-150%);
+}
+
+.overlay {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.388);
+  position: absolute;
+  z-index: 9999;
+}
+
+@media screen and (min-width: 600px) {
+  article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+  }
+  p, hr {
+    max-width: 80%;
+  }
+  .article-3 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.paragraph-container p {
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.purple body {
+  background-color: rgb(180, 26, 180);
+  transition: background-color 0.3s ease;
+}
+
+.purple .image-container::before {
+  background: linear-gradient(to top, rgb(180, 26, 180), transparent);
+}
+
+.blue body {
+  background-color: rgb(60, 60, 238);
+  transition: background-color 0.3s ease;
+}
+
+.blue .image-container::before {
+  background: linear-gradient(to top, rgb(60, 60, 238), transparent);
+}
+
+.dark body {
+  background-color: black;
+  transition: background-color 0.3s ease;
+}
+
+.dark .image-container::before {
+  background: linear-gradient(to top, black, transparent);
+}
+
+@media screen and (max-width: 599px) {
+  .blue nav {
+    background-color: rgb(3, 3, 32);
+  }
+  .purple nav {
+    background-color: rgb(56, 9, 56);
+  }
+}
+.purple ::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+/* On hover, change the color of the scrollbar thumb */
+.purple ::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(58, 19, 58);
+}
+
+.blue ::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+/* On hover, change the color of the scrollbar thumb */
+.blue ::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(11, 11, 41);
+}/*# sourceMappingURL=index.css.map */

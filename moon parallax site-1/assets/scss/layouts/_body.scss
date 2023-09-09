@@ -1,0 +1,11 @@
+@import '../utilities/functions';
+body {
+  font-family: "kumbh sans", sans-serif;
+  font-family: "League Spartan", sans-serif;
+  font-family: "Poppins", sans-serif;
+  background-color: #000;
+    color: $white;
+    font-size: toRem(14px);
+    max-width: 100vw;
+    overflow-x: hidden;
+}

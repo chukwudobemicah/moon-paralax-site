@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>moonlight Parallax site</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/moon-logo.svg">
+    <link rel="stylesheet" href="./assets/scss/index.css">
+</head>
+
+<body>
+    <header>
+        <div class="menu-container">
+            <div class="hamburger-container">
+                <div class="hamburger-btn"></div>
+            </div>
+        </div>
+        <nav class="nav translate-left">
+            <a href="#"><img class="moon-logo" src="./assets/images/moon-logo.svg" alt=""></a>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Work</li>
+                <li>Contact</li>
+                <li>
+                    <div>
+                        <p>themes</p>
+                        <!-- <div class="themes"><button></button> <button></button> <button></button> </div> -->
+                        <div class="theme-btn hidden"><button id="purple-theme-btn"></button> <button
+                                id="blue-theme-btn"></button> <button id="dark-theme-btn"></button> </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="overlay hidden"></div>
+
+    <main>
+        <div class="image-container">
+            <img class="stars" src="./assets/images/stars.bin" alt="stars">
+            <img class="moon" src="./assets/images/moon.bin" alt="moon">
+            <img class="mountain-back" src="./assets/images/mountain-back.bin" alt="mountain-back">
+            <img class="mountain-front" src="./assets/images/mountain-front.bin" alt="mountain-front">
+            <div class="blur"></div>
+            <h1>Moonlight</h1>
+        </div>
+        <section>
+            <article>
+                <div class="masked-element">
+                    <h2>Moonlight</h2>
+                </div>
+                <div class="paragraph-container">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium deserunt accusamus odio
+                        odit id
+                        illum, reiciendis delectus, eius doloremque aperiam architecto vel repellat possimus quidem.</p>
+                    <hr>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium deserunt accusamus odio
+                        odit id
+                        illum, reiciendis delectus, eius doloremque aperiam architecto vel repellat possimus quidem.</p>
+                    <hr>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium deserunt accusamus odio
+                        odit id
+                        illum, reiciendis delectus, eius doloremque aperiam architecto vel repellat possimus quidem.</p>
+                </div>
+            </article>
+            <article>
+                <div class="masked-element">
+                    <h2>Art Is an expression Of the mind</h2>
+                </div>
+                <div class="paragraph-container">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium deserunt accusamus odio
+                        odit id
+                        illum, reiciendis delectus, eius doloremque aperiam architecto vel repellat possimus quidem.</p>
+                    <hr>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium deserunt accusamus odio
+                        odit id
+                        illum, reiciendis delectus, eius doloremque aperiam architecto vel repellat possimus quidem.</p>
+                    <hr>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium deserunt accusamus odio
+                        odit id
+                        illum, reiciendis delectus, eius doloremque aperiam architecto vel repellat possimus quidem.</p>
+                </div>
+            </article>
+            <article class="article-3">
+                <hr>
+                <div class="masked-element">
+                    <h2>Creativity and Efficiency </h2>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt harum tempore nemo est culpa quo
+                    quibusdam fugiat expedita aliquam magnam recusandae et error maxime, velit id ipsa voluptatem
+                    ratione impedit.
+                    In adipisci quia natus, ratione iste iusto vel impedit nulla sint. Similique quaerat ab alias
+                    perferendis veniam? Obcaecati doloribus repudiandae temporibus laborum. Impedit odio architecto sint
+                    nostrum ea quidem eum.
+                    Nobis culpa distinctio repellat quis. Quod, eius sit assumenda a, deserunt animi et necessitatibus
+                    incidunt fuga temporibus odio id. Obcaecati mollitia voluptas dolores quam sed deserunt voluptate
+                    quo, adipisci iusto!
+                    di dolor recusandae hic non quia
+                    sapiente laborum, esse, omnis sit ut asperiores molestiae optio! Magnam provident doloremque nulla
+                    nesciunt blanditiis exercitationem!
+                    litia quod harum aperiam error quis ad excepturi
+                    aliquid maiores. Deserunt, eius.
+                    Asperiores reiciendis pariatur quod tempora, rem iure nisi eius sequi excepturi quas, unde
+                    praesentium ullam error animi dolores sit exercitationem alias, saepe nam quam doloribus. Harum
+                    saepe consequatur nemo eaque.</p>
+            </article>
+        </section>
+    </main>
+    <!-- <script src="https://unpkg.com/split-type"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="gsapAnimations.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

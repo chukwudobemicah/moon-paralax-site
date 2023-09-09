@@ -1,0 +1,13 @@
+@import "./base/resets";
+// utilities
+@import './utilities/variables';
+@import './utilities/functions';
+@import './utilities/mixins';
+// layouts
+@import "./components/scroll-bar";
+@import './utilities/js-classes';
+@import './layouts/body';
+@import './layouts/header';
+@import './layouts/parallax-container';
+@import './layouts/main';
+@import './themes/themes'
